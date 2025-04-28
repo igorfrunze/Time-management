@@ -1,0 +1,52 @@
+.main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(#ede8f5, #3d52a0);
+  height: calc(100vh - 50px);
+  font-size: 60px;
+}
+
+h1 {
+  font-family: 'Lobster';
+  margin-bottom: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding: 60px 0 60px 50px;
+  border-radius: 10px;
+  border: 2px solid #ede8f5;
+  height: 600px;
+  width: 700px;
+}
+
+.input_name, .input_imgURL, .input_email {
+  height: 30px;
+  width: 300px;
+  background-color: #8697c4;
+  border: 1px solid #ede8f5;
+  border-radius: 5px;
+  font-family: inherit;
+  margin-top: 10px;
+}
+input::placeholder {
+  color: #ede8f5;
+}
+
+.email,
+.image,
+.name {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.settingsBtn {
+  margin: 20px 0 0 250px;
+  width: 150px;
+  height: 40px;
+  font-size: 30px;
+}

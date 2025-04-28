@@ -1,0 +1,16 @@
+.btn {
+  font-size: 20px;
+  font-family: 'Lobster';
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #ede8f5;
+  background-color: #7091e6;
+}
+
+.btn:hover {
+  background-color: #8697c4;
+  cursor: pointer;
+}
+
+

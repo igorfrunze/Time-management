@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #adbbda;
+  padding: 5px 20px;
+  height: 50px;
+  z-index: 9;
+}
+
+.time_management {
+ text-transform: uppercase;
+ letter-spacing: 2px; 
+ font-size: 30px;
+ font-family: 'Lobster', sans-serif;
+}
+
+.time_management:hover {
+  cursor: pointer;
+}
+
+.login_register_area {
+  display: flex;
+  gap: 20px;
+}
+
+.login, .register {
+  text-decoration: none;
+  color: #000;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.login:hover, .register:hover {
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid #ede8f5;
+  background-color: #7091e6;
+}
+
+
+/* ------------------------------- */
+
+/* ------------------------------------- */
+
+.circle {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+.userCircle {
+  display: flex;
+  align-items: center;
+  gap: 10px
+}
+
+.home, .projects, .settings {
+  text-decoration: none;
+  color: #000;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.home:hover, .projects:hover, .settings:hover {
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid #ede8f5;
+  background-color: #7091e6;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 10px
+}

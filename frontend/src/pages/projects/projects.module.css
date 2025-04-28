@@ -1,0 +1,82 @@
+.project_main {
+  display: flex;
+  gap: 50px;
+  background: linear-gradient(#ede8f5, #3d52a0);
+  height: calc(100vh - 50px);
+  font-size: 60px;
+}
+
+.projects_zone {
+  width: calc(100% - 350px);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.projects_list {
+  width: 1000px;
+  height: 690px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.projects_list_cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.project_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.project_card a {
+  text-decoration: none;
+}
+
+.project_card_h2 {
+  font-size: 30px;
+  border: 1px solid #fff;
+  padding: 10px;
+  border-radius: 5px;
+  width: auto;
+  height: auto;
+  font-family: 'Lobster';
+  color: #3d52a0;
+  margin-bottom: 4px;
+}
+
+.project_card_p {
+  font-size: 20px;
+  height: auto;
+  overflow: hidden;
+}
+
+.project_card_small {
+  font-size: 10px;
+  margin-bottom: -10px;
+}
+
+.projects_pagination {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 20px;
+}

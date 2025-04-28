@@ -1,0 +1,30 @@
+
+.aside_component {
+  background-color: #25d8e8;
+  width: 350px;
+  height: calc(100vh - 50px);
+  border-radius: 0px 10px 10px 0px ;
+  
+}
+
+.aside_ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 50px;
+}
+.aside_ul li {
+  font-size: 40px;
+  font-family: 'Lobster';
+}
+
+.aside_ul li:hover {
+  cursor: pointer;
+}
+
+.link_li {
+  font-size: 40px;
+  font-family: 'Lobster';
+  text-decoration: none;
+}
