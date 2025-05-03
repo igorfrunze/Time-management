@@ -35,7 +35,6 @@ export const Settings = () => {
           <span>Name: </span>{' '}
           <input
             className={styles.input_name}
-            value={newName}
             onChange={(event) => setNewName(event.target.value)}
           />
         </div>
@@ -43,7 +42,6 @@ export const Settings = () => {
           <span>Image URL: </span>
           <input
             className={styles.input_imgURL}
-            value={newImageURL}
             onChange={(event) => setNewImageURL(event.target.value)}
           />
         </div>

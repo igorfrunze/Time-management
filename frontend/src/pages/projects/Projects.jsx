@@ -8,10 +8,11 @@ import styles from './projects.module.css';
 import { selectProjects } from '../../redux';
 
 export const Projects = () => {
-  const dispatch = useDispatch();
-  const { projects, page, totalPages } = useSelector(selectProjects);
+  const { projects, page, totalPages, loading } = useSelector(selectProjects);
   const userId = localStorage.getItem('id');
   const [flipPage, setFlipPage] = useState(page);
+  const dispatch = useDispatch();
+
   useEffect(() => {
     if (userId) {
       dispatch(fetchProject(userId, flipPage));
@@ -35,14 +36,16 @@ export const Projects = () => {
       <Aside />
       <div className={styles.projects_zone}>
         <h2>Your Projects</h2>
-        {projects.length === 0 ? (
+        {loading ? (
+          <p className={styles.loading}>Loading projects...</p>
+        ) : projects.length === 0 ? (
           <p>No projects found. Create a new one to get started</p>
         ) : (
           <div className={styles.projects_list}>
             <div className={styles.projects_list_cards}>
               {projects.map((project) => (
                 <div key={project._id} className={styles.project_card}>
-                  <Link to={`/projects/${project._id}`}>
+                  <Link to={`/projects/edit/${project._id}`}>
                     <h3 className={styles.project_card_h2}>{project.name}</h3>
                   </Link>
                   <p className={styles.project_card_p}>

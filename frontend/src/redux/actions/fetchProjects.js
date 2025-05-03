@@ -2,6 +2,7 @@ export const fetchProject =
   (userId, page = 1, limit = 6) =>
   async (dispatch) => {
     try {
+      dispatch({type: 'SET_PROJECTS_LOADING'})
       const response = await fetch(
         `${
           import.meta.env.VITE_GET_PROJECT

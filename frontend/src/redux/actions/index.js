@@ -5,3 +5,6 @@ export * from './updateUserData';
 export * from './fetchUserData';
 export * from './postProject';
 export * from './fetchProjects';
+export * from './putProject';
+export * from './deleteProject';
+export * from './getSingleProject';

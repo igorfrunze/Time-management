@@ -38,7 +38,34 @@ router.post('/', async (req, res) => {
   }
 });
 
-router.delete('/:id', async (req, res) => {
+router.get('/project/:id', async (req, res) => {
+  try {
+    const project = await Project.findById(req.params.id)
+    if(!project) {
+      return res.status(404).json({message: 'Project not found'})
+    } else {
+      return res.json(project)
+    }
+  } catch (error) {
+    res.status(500).json({message: 'Error fetching project'})
+  }
+})
+
+router.put('/project/:id', async (req, res) => {
+  const {name, content} = req.body;
+  try {
+    const updated = await Project.findByIdAndUpdate(
+      req.params.id,
+      {name, content},
+      {new: true}
+    )
+    res.json(updated)
+  } catch (error) {
+    res.status(500).json({message: "Error updating project"})
+  }
+})
+
+router.delete('/project/:id', async (req, res) => {
   try {
     await Project.findByIdAndDelete(req.params.id);
     res.json({ message: 'Project deleted' });

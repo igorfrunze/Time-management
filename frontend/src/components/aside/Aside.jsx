@@ -7,7 +7,7 @@ export const Aside = () => {
       <main>
         <ul className={styles.aside_ul}>
           <li>
-            <Link className={styles.link_li} to="/projects_create">
+            <Link className={styles.link_li} to="/projects/create">
               Create project
             </Link>
           </li>
