@@ -7,7 +7,6 @@ export const Home = () => {
     <main className={styles.home}>
       <div className={styles.text}>
         <span style={{ color: '#000000' }}>Your</span>
-        <span style={{ color: '#929292' }}>Best</span>
         <span style={{ color: '#616161' }}>App</span>
         <span style={{ color: '#141414' }}>For</span>
         <span style={{ color: '#929292' }}>Managing</span>
