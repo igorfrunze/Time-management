@@ -8,6 +8,8 @@ import styles from './projects.module.css';
 import { selectProjects } from '../../redux';
 
 export const Projects = () => {
+  const [sortBy, setSortBy] = useState('desc');
+  const [filter, setFilter] = useState('');
   const { projects, page, totalPages, loading } = useSelector(selectProjects);
   const userId = localStorage.getItem('id');
   const [flipPage, setFlipPage] = useState(page);
@@ -25,6 +27,12 @@ export const Projects = () => {
     }
   };
 
+  useEffect(() => {
+    if (userId) {
+      dispatch(fetchProject(userId, flipPage, 6, sortBy, filter));
+    }
+  }, [dispatch, userId, flipPage, sortBy, filter]);
+
   const handlePageChangeDecrease = () => {
     if (flipPage > 1) {
       setFlipPage((prev) => prev - 1);
@@ -35,7 +43,18 @@ export const Projects = () => {
     <main className={styles.project_main}>
       <Aside />
       <div className={styles.projects_zone}>
-        <h2>Your Projects</h2>
+        <input
+          className={styles.projects_input_filter}
+          type="text"
+          placeholder="Filter by title"
+          value={filter}
+          onChange={(e) => setFilter(e.target.value)}
+        />
+
+        <select className={styles.projects_dropdown} value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
+          <option value="desc">Newest first</option>
+          <option value="asc">Oldest first</option>
+        </select>
         {loading ? (
           <p className={styles.loading}>Loading projects...</p>
         ) : projects.length === 0 ? (

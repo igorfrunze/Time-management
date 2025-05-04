@@ -80,3 +80,17 @@
   align-items: center;
   font-size: 20px;
 }
+
+.projects_input_filter {
+  margin: 20px 0 10px 0;
+}
+
+.projects_input_filter::placeholder {
+  color: #000;
+}
+
+.projects_dropdown {
+  margin-bottom: 10px;
+  width: 120px;
+  text-align: center;
+}
