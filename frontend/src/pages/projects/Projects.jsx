@@ -51,12 +51,19 @@ export const Projects = () => {
           onChange={(e) => setFilter(e.target.value)}
         />
 
-        <select className={styles.projects_dropdown} value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
+        <select
+          className={styles.projects_dropdown}
+          value={sortBy}
+          onChange={(e) => setSortBy(e.target.value)}
+        >
           <option value="desc">Newest first</option>
           <option value="asc">Oldest first</option>
         </select>
         {loading ? (
-          <p className={styles.loading}>Loading projects...</p>
+          <>
+            <p className={styles.loading}></p>
+            <span>Loading...</span>
+          </>
         ) : projects.length === 0 ? (
           <p>No projects found. Create a new one to get started</p>
         ) : (

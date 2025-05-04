@@ -21,8 +21,6 @@ export const Aside = () => {
               Analytics
             </Link>
           </li>
-          <li>Filter</li>
-          <li>Sort</li>
         </ul>
       </main>
     </aside>

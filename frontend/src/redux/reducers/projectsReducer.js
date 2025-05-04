@@ -20,7 +20,7 @@ export const projectsReducer = (state = initialState, action) => {
     }
 
     case 'SET_PROJECTS': {
-      return {
+      return  {
         ...state,
         projects: action.payload.projects,
         page: action.payload.page,
