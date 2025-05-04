@@ -1,0 +1,14 @@
+.analytics_main {
+  display: flex;
+  gap: 400px;
+  background: linear-gradient(#ede8f5, #3d52a0);
+  height: calc(100vh - 50px);
+  font-size: 20px;
+}
+
+.analytics_container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}

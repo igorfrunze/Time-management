@@ -32,3 +32,8 @@
   font-family: inherit;
   font-size: 20px;
 }
+
+.project_create_timer {
+  display: flex;
+  gap: 20px
+}

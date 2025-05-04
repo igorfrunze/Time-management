@@ -12,7 +12,7 @@ app.use(express.json());
 
 app.use('/api/auth', authRoutes);
 app.use('/api/projects', projectRoutes);
-app.use('/api/timer', timerRoutes);
+app.use('/api/timers', timerRoutes);
 app.use('/api/update_user', authRoutes);
 app.use('/api/user', authRoutes);
 

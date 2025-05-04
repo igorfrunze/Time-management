@@ -8,3 +8,4 @@ export * from './fetchProjects';
 export * from './putProject';
 export * from './deleteProject';
 export * from './getSingleProject';
+export * from './timerActions';

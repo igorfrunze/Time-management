@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { postProject } from '../../redux';
-import { Aside, Button } from '../../components';
+import { Aside, Button} from '../../components';
 import styles from './project-create.module.css';
 
 export const ProjectCreate = () => {
@@ -27,6 +27,7 @@ export const ProjectCreate = () => {
       <Aside />
       <form className={styles.project_create_form} onSubmit={handleSubmit}>
         <span>Create new project</span>
+        
         <input
           className={styles.project_create_input}
           type="text"

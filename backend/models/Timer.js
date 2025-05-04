@@ -15,3 +15,5 @@ const TimerSchema = mongoose.Schema({
   isRunning: { type: Boolean, default: false },
   startedAt: { type: Date },
 });
+
+module.exports = mongoose.model('Timer', TimerSchema);

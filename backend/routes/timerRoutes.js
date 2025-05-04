@@ -15,12 +15,17 @@ router.post('/start', async (req, res) => {
         projectId,
         isRunning: true,
         startedAt: new Date(),
+        timeSpent: 0, 
       });
     } else {
-      await timer.save();
-      res.json(timer);
+      timer.isRunning = true;
+      timer.startedAt = new Date(); 
     }
+
+    await timer.save();
+    res.json(timer); 
   } catch (error) {
+    console.error('Timer start error:', error);
     res.status(500).json({ message: 'Error starting timer' });
   }
 });
@@ -43,6 +48,24 @@ router.post('/stop', async (req, res) => {
     res.json(timer);
   } catch (error) {
     res.status(500).json({ message: 'error stoping timer' });
+  }
+});
+
+router.get('/', async (req, res) => {
+  try {
+    const timers = await Timer.find();
+    const result = {};
+    timers.forEach(timer => {
+      result[timer.projectId] = {
+        isRunning: timer.isRunning,
+        startedAt: timer.startedAt,
+        timeSpent: timer.timeSpent,
+      };
+    });
+    res.json(result);
+  } catch (error) {
+    console.error('Error fetching timers:', error);
+    res.status(500).json({ message: 'Error fetching timers' });
   }
 });
 
